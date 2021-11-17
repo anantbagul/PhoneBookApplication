@@ -2,7 +2,9 @@ package com.bikkadIt.phonebook.service;
 
 import java.util.List;
 
+
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +31,10 @@ public class ContactServiceImpl implements ContactService {
 	@Override
 	public List<Contact> getAllContacts() {
 		List<Contact> findAll = contactRepository.findAll();
-		return findAll;
+		List<Contact> collect = findAll.stream()
+		         .filter(contact -> contact.getActiveSw()=='Y')
+		         .collect(Collectors.toList());
+	      return collect;
 	}
 
 	@Override
@@ -46,12 +51,24 @@ public class ContactServiceImpl implements ContactService {
 	@Override
 	public boolean deleteContactById(Integer cid) {
 
-		boolean status=	contactRepository.existsById(cid);
-		if(status) {
-		contactRepository.deleteById(cid);
+		/*boolean existsById = contactRepiository.existsById(cid);
+		if(existsById) {
+		contactRepiository.deleteById(cid);
 		return true;
 		}
 		return false;
-	}
+	}*/
+		
+		
+		    Optional<Contact> optional = contactRepository.findById(cid);
+		    
+		      if(optional.isPresent()) {
+		    	Contact contact=  optional.get();  
+		    	contact.setActiveSw('N');
+		    	contactRepository.save(contact);
+		    	return true;
+		      }
+		      return false;
+		      }
 
 }

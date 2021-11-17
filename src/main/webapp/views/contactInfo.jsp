@@ -8,16 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <h2>Save Contact here</h2>
 
 <font color='green'>${success}</font>
 <font color='green'>${error}</font>
 
-<form:form  action="saveContact" modelAttribute="contact" method ="POST">
+<form:form  action="saveContact?contactId=${contact.contactId}" modelAttribute="contact" method ="POST">
 <table>
 
 <tr>
-<td>Contact Name:</td>
+<td>Contact name:</td>
 <td><form:input path="contactName"/> </td>
 </tr>
 
@@ -39,6 +40,5 @@
 </form:form>
 
 <a href="viewContacts">View All Contact</a>
-
 </body>
 </html>
