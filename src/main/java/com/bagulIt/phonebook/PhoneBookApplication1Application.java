@@ -1,4 +1,4 @@
-package com.bikkadIt.phonebook;
+package com.bagulIt.phonebook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.bikkadIt.phonebook.controller;
+package com.bagulIt.phonebook.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.bikkadIt.phonebook.entity.Contact;
-import com.bikkadIt.phonebook.service.ContactService;
+import com.bagulIt.phonebook.entity.Contact;
+import com.bagulIt.phonebook.service.ContactService;
 
 @Controller
 public class ViewContactController {

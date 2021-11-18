@@ -1,8 +1,8 @@
-package com.bikkadIt.phonebook.service;
+package com.bagulIt.phonebook.service;
 
 import java.util.List;
 
-import com.bikkadIt.phonebook.entity.Contact;
+import com.bagulIt.phonebook.entity.Contact;
 
 public interface ContactService {
 

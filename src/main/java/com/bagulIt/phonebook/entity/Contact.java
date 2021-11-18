@@ -1,4 +1,4 @@
-package com.bikkadIt.phonebook.entity;
+package com.bagulIt.phonebook.entity;
 
 import java.time.LocalDate;
 

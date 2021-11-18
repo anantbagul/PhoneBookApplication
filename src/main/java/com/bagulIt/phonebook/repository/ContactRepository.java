@@ -1,11 +1,11 @@
-package com.bikkadIt.phonebook.repository;
+package com.bagulIt.phonebook.repository;
 
 import java.io.Serializable;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.bikkadIt.phonebook.entity.Contact;
+import com.bagulIt.phonebook.entity.Contact;
 
 
 @Repository
